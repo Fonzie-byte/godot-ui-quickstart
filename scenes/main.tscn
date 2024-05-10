@@ -1,0 +1,257 @@
+[gd_scene load_steps=13 format=3 uid="uid://233063dxk4g8"]
+
+[ext_resource type="Texture2D" uid="uid://cv46uevpad5k8" path="res://assets/textures/jackey-fingerhold-avatar.png" id="1_5g1fk"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_dtm4f"]
+[ext_resource type="Texture2D" uid="uid://djyu6utqa7b88" path="res://assets/icons/two-coins.svg" id="2_rsxou"]
+[ext_resource type="FontFile" uid="uid://blfxkai6xpkr3" path="res://assets/fonts/PoetsenOne-Regular.ttf" id="2_vm70m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_388bm"]
+bg_color = Color(0.266667, 0.133333, 0.133333, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_size = 6
+shadow_offset = Vector2(6, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gntru"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 0)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnxru"]
+bg_color = Color(0, 0, 0, 0.501961)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpkqx"]
+bg_color = Color(0.8, 0.8, 0, 0.501961)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oae15"]
+bg_color = Color(0.266667, 0.266667, 0.133333, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_size = 6
+shadow_offset = Vector2(6, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xruu"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 6
+shadow_offset = Vector2(6, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frt4a"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 6
+shadow_offset = Vector2(6, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijn5r"]
+bg_color = Color(0.133333, 0.133333, 0.133333, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 6
+shadow_offset = Vector2(6, 6)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dtm4f")
+
+[node name="PlayerInfoBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 480.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_388bm")
+
+[node name="AvatarFrame" type="Panel" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -54.0
+offset_right = 132.0
+offset_bottom = 54.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gntru")
+
+[node name="AvatarImage" type="TextureRect" parent="PlayerInfoBox/AvatarFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5g1fk")
+expand_mode = 1
+
+[node name="Name" type="Label" parent="PlayerInfoBox"]
+layout_mode = 1
+offset_left = 144.0
+offset_top = 24.0
+offset_right = 348.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("2_vm70m")
+theme_override_font_sizes/font_size = 24
+text = "Jackey Fingerhold"
+
+[node name="SpeciesAndCareer" type="Label" parent="PlayerInfoBox"]
+layout_mode = 1
+offset_left = 144.0
+offset_top = 60.0
+offset_right = 351.0
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("2_vm70m")
+theme_override_font_sizes/font_size = 24
+text = "Weasel Rake"
+
+[node name="ExperienceBar" type="ProgressBar" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 144.0
+offset_top = -60.0
+offset_right = -36.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_vm70m")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/background = SubResource("StyleBoxFlat_fnxru")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wpkqx")
+step = 0.1
+value = 62.7
+
+[node name="CoinPurse" type="Panel" parent="."]
+z_index = -12
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -216.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 120.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oae15")
+
+[node name="CoinIcon" type="TextureRect" parent="CoinPurse"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -36.0
+offset_right = 84.0
+offset_bottom = 36.0
+grow_vertical = 2
+texture = ExtResource("2_rsxou")
+expand_mode = 1
+
+[node name="CoinTexts" type="Label" parent="CoinPurse"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 96.0
+offset_top = 12.0
+offset_right = 303.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("2_vm70m")
+theme_override_font_sizes/font_size = 24
+text = "0ø  0Đ
+0Q  0₳"
+
+[node name="CoinButton" type="Button" parent="."]
+z_index = -6
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -24.0
+offset_right = 90.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_5xruu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_frt4a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ijn5r")
+text = "Receive orichalk"
+
+[connection signal="pressed" from="CoinButton" to="." method="_on_coin_button_pressed"]
